@@ -14,7 +14,6 @@ const SearchPage = (props) => {
             setError(true)
             return false
         }
-        setError(false)
         const searchText = e.target.value
         if(searchText && /^(\d+)$/.test(searchText)){
             axios.get(`https://swapi.dev/api/planets/${searchText}`)
